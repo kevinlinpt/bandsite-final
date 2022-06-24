@@ -1,0 +1,192 @@
+@font-face {
+  font-family: "Avenir Next";
+  src: url("http://www.yoursite.com/fonts/Avenir_Next.otf");
+}
+
+$primary-color-black: #323232 !default;
+$primary-color-silver: #afafaf !default;
+$primary-color-white: #ffffff !default;
+$secondary-color-black: #000000 !default;
+$secondary-color-mercury: #e1e1e1 !default;
+$secondary-color-alabaster: #fafafa !default;
+
+/*# sourceMappingURL=global.css.map */
+/* For Mobile */
+@media screen and (max-width: 767px,) {
+  .view {
+    width: 320px;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $primary-color-black;
+    list-style-type: none;
+    color: $primary-color-white;
+    padding: 16px 0 16px 0;
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+    }
+  }
+  .logo {
+    display: flex;
+  }
+
+  .page-header {
+    color: $primary-color-white;
+    text-decoration: none;
+    opacity: 1;
+    position: absolute;
+    z-index: 100;
+    margin-left: 16px;
+  }
+  .section-header {
+    padding-bottom: 16px;
+  }
+  .subheader {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 600;
+  }
+  .body-copy {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+  .footer-copy {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+  .section--footer {
+    background-color: $primary-color-black;
+    width: 100%;
+  }
+}
+
+/* For Tablets */
+@media screen and (min-width: 767px) and (max-width: 1279px) {
+  .view {
+    width: 768px;
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    background-color: $primary-color-black;
+    list-style-type: none;
+    color: white;
+    padding: 36px 0 36px 36px;
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      width: 50%;
+    }
+  }
+  .logo {
+    display: flex;
+  }
+
+  .page-header {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
+    color: $primary-color-white;
+    text-decoration: none;
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    // margin-left: 36px;
+  }
+  .section-header {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    padding-bottom: 36px;
+  }
+  .subheader {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+  .body-copy {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+  .footer-copy {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  .section--footer {
+    background-color: $primary-color-black;
+    width: 100%;
+  }
+}
+
+/* For Desktop */
+@media screen and (min-width: 1279px) {
+  .view {
+    width: 1280px;
+  }
+  .navbar {
+    display: flex;
+    align-items: center;
+    background-color: $primary-color-black;
+    list-style-type: none;
+    color: white;
+    padding: 36px 0 36px 80px;
+    width: 66%;
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+      width: 50%;
+    }
+  }
+  .logo {
+    display: flex;
+  }
+
+  .page-header {
+    font-size: 60px;
+    line-height: 68px;
+    font-weight: 700;
+    color: $primary-color-white;
+    text-decoration: none;
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    // margin-left: 36px;
+  }
+  .section-header {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    padding-bottom: 36px;
+  }
+  .subheader {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 600;
+  }
+  .body-copy {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 400;
+  }
+  .footer-copy {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+  }
+  .section--footer {
+    background-color: $primary-color-black;
+    width: 100%;
+  }
+}

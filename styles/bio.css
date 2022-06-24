@@ -1,0 +1,380 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+  list-style-type: none;
+}
+
+/* For Mobile */
+@media screen and (max-width: 767px) {
+  .view {
+    width: 320px;
+  }
+
+  .section--navigation ul {
+    padding: 8px 0 0 0;
+  }
+
+  .section--hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: flex-start;
+    background-size: cover;
+    background-position: center;
+    background-color: #323232;
+  }
+
+  .hero-flex img {
+    width: 100%;
+    opacity: 0.5;
+  }
+
+  .main-section {
+    padding: 0 16px 16px 16px;
+  }
+
+  .section--description h1 {
+    padding: 24px 0 16px 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .section--gallery {
+    background-color: #fafafa;
+  }
+
+  .section--gallery h1 {
+    color: #323232;
+    padding: 16px 0 0 0;
+  }
+
+  .section--gallery img {
+    padding: 12px 0 2px 0;
+  }
+
+  .subheader-description p {
+    padding: 16px 0 0 0;
+    color: #323232;
+  }
+
+  .subheader p {
+    color: #323232;
+  }
+
+  .subheader-heading {
+    padding: 24px 0 16px 0;
+  }
+
+  .section--footer {
+    color: #ffffff;
+  }
+
+  .section--footer h1 {
+    padding: 16px 0 16px 0;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+  }
+
+  .contact {
+    padding: 16px 0 0 0;
+  }
+
+  .artist-info {
+    font-weight: bold;
+  }
+
+  .logo-footer {
+    padding: 64px 0 0 0;
+  }
+
+  .copyright p {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+}
+/* For Tablets */
+@media screen and (min-width: 767px) and (max-width: 1279px) {
+  .view {
+    width: 768px;
+  }
+
+  .section--hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: flex-start;
+    background-size: cover;
+    background-position: center;
+    background-color: #323232;
+  }
+
+  .section--hero h1 {
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 1;
+    position: absolute;
+    z-index: 100;
+    margin-left: 36px;
+  }
+
+  .hero-flex img {
+    width: 100%;
+    opacity: 0.5;
+  }
+
+  .main-section {
+    padding: 48px 36px 36px 36px;
+  }
+
+  .description-flex {
+    padding: 0 64px 0 64px;
+  }
+
+  .body-copy {
+    display: flex;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .section--gallery {
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+  }
+
+  .gallery-container {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section--gallery h1 {
+    color: #323232;
+    padding: 36px 0 0 0;
+  }
+
+  .section--gallery img {
+    padding: 10px;
+  }
+
+  .subheader-description p {
+    padding: 36px 0 8px 0;
+    color: #323232;
+  }
+
+  .subheader p {
+    color: #323232;
+  }
+
+  .subheader-heading {
+    padding: 48px 0 32px 0;
+  }
+
+  .body-copy p {
+    padding: 0 32px 0 0;
+  }
+
+  .section--footer {
+    color: #ffffff;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .artists {
+    width: 100%;
+  }
+
+  .artist-description {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .section--footer h1 {
+    padding: 16px 0 16px 0;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+  }
+
+  .contact {
+    padding: 16px 0 0 0;
+  }
+
+  .artist-info {
+    font-weight: bold;
+  }
+
+  .logo-footer {
+    padding: 64px 0 0 0;
+  }
+
+  .copyright p {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+}
+/* For Desktop */
+@media screen and (min-width: 1279px) {
+  .view {
+    width: 1280px;
+  }
+
+  .section--navigation {
+    background-color: #323232;
+  }
+
+  .section--hero {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    justify-content: flex-start;
+    background-size: cover;
+    background-position: center;
+    background-color: #323232;
+  }
+
+  .section--hero h1 {
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 1;
+    position: absolute;
+    z-index: 100;
+    margin-left: 80px;
+  }
+
+  .hero-flex img {
+    width: 100%;
+    opacity: 0.5;
+  }
+
+  .main-section {
+    padding: 48px 80px 36px 80px;
+  }
+
+  .description-flex {
+    padding: 0 120px 0 120px;
+  }
+
+  .body-copy {
+    display: flex;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .section--gallery {
+    width: 100%;
+    height: 100%;
+    background-color: #fafafa;
+  }
+
+  .gallery-container {
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section--gallery h1 {
+    color: #323232;
+    padding: 36px 0 0 0;
+  }
+
+  .section--gallery img {
+    padding: 10px;
+  }
+
+  .subheader-description p {
+    padding: 36px 0 8px 0;
+    color: #323232;
+  }
+
+  .subheader p {
+    color: #323232;
+  }
+
+  .subheader-heading {
+    padding: 48px 0 32px 0;
+  }
+
+  .body-copy p {
+    padding: 0 32px 0 0;
+  }
+
+  .section--footer {
+    color: #ffffff;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .artists {
+    width: 100%;
+  }
+
+  .artist-description {
+    display: flex;
+    justify-content: space-between;
+    width: 66%;
+  }
+
+  .section--footer h1 {
+    padding: 16px 0 16px 0;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 40%;
+  }
+
+  .contact {
+    padding: 16px 0 0 0;
+  }
+
+  .artist-info {
+    font-weight: bold;
+  }
+
+  .logo-footer {
+    padding: 64px 0 0 0;
+  }
+
+  .copyright p {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+  }
+}/*# sourceMappingURL=bio.css.map */
