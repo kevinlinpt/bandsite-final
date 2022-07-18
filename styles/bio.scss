@@ -1,11 +1,4 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  color: inherit;
-  list-style-type: none;
-}
+@use "./partials/media-query" as *;
 
 $primary-color-black: #323232 !default;
 $primary-color-silver: #afafaf !default;
@@ -13,383 +6,409 @@ $primary-color-white: #ffffff !default;
 $secondary-color-black: #000000 !default;
 $secondary-color-mercury: #e1e1e1 !default;
 $secondary-color-alabaster: #fafafa !default;
+$tertiary-color-red: #d22d2d !default;
 
-/* For Mobile */
-@media screen and (max-width: 767px) {
-  .view {
-    width: 320px;
-  }
-
-  .section--navigation ul {
-    padding: 8px 0 0 0;
-  }
-
-  .section--hero {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: flex-start;
-    background-size: cover;
-    background-position: center;
-    background-color: $primary-color-black;
-  }
-
-  .hero-flex img {
-    width: 100%;
-    opacity: 0.5;
-  }
-
-  .main-section {
-    padding: 0 16px 16px 16px;
-  }
-
-  .section--description h1 {
-    padding: 24px 0 16px 0;
-  }
-
-  img {
-    width: 100%;
-  }
-
-  .section--gallery {
-    background-color: $secondary-color-alabaster;
-  }
-
-  .section--gallery h1 {
-    color: $primary-color-black;
-    padding: 16px 0 0 0;
-  }
-
-  .section--gallery img {
-    padding: 12px 0 2px 0;
-  }
-
-  .subheader-description p {
-    padding: 16px 0 0 0;
-    color: $primary-color-black;
-  }
-
-  .subheader p {
-    color: $primary-color-black;
-  }
-
-  .subheader-heading {
-    padding: 24px 0 16px 0;
-  }
-
-  .section--footer {
-    color: $primary-color-white;
-  }
-
-  .section--footer h1 {
-    padding: 16px 0 16px 0;
-  }
-
-  .icons {
-    display: flex;
-    justify-content: space-between;
-    width: 40%;
-  }
-
-  .contact {
-    padding: 16px 0 0 0;
-  }
-
-  .artist-info {
-    font-weight: bold;
-  }
-
-  .logo-footer {
-    padding: 64px 0 0 0;
-  }
-
-  .copyright p {
-    font-size: 12px;
-    line-height: 18px;
-    font-weight: 400;
-  }
-}
-
-/* For Tablets */
-@media screen and (min-width: 767px) and (max-width: 1279px) {
-  .view {
-    width: 768px;
-  }
-
-  .section--hero {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: flex-start;
-    background-size: cover;
-    background-position: center;
-    background-color: $primary-color-black;
-  }
-
-  .section--hero h1 {
+.page-header__style {
+  color: $primary-color-white;
+  text-decoration: none;
+  opacity: 1;
+  position: absolute;
+  z-index: 100;
+  margin-left: 1rem;
+  @include tablet {
     color: $primary-color-white;
     text-decoration: none;
     opacity: 1;
     position: absolute;
+    width: 100%;
     z-index: 100;
-    margin-left: 36px;
-  }
-
-  .hero-flex img {
-    width: 100%;
-    opacity: 0.5;
-  }
-
-  .main-section {
-    padding: 48px 36px 36px 36px;
-  }
-
-  .description-flex {
-    padding: 0 64px 0 64px;
-  }
-
-  .body-copy {
-    display: flex;
-  }
-
-  img {
-    width: 100%;
-  }
-
-  .section--gallery {
-    // display: flex;
-    // flex-direction: column;
-    // flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-    background-color: $secondary-color-alabaster;
-  }
-
-  .gallery-container {
-    display: grid;
-    gap: 1px;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .section--gallery h1 {
-    color: $primary-color-black;
-    padding: 36px 0 0 0;
-  }
-
-  .section--gallery img {
-    padding: 10px;
-  }
-
-  .subheader-description p {
-    padding: 36px 0 8px 0;
-    color: $primary-color-black;
-  }
-
-  .subheader p {
-    color: $primary-color-black;
-  }
-
-  .subheader-heading {
-    padding: 48px 0 32px 0;
-  }
-
-  .body-copy p {
-    padding: 0 32px 0 0;
-  }
-
-  .section--footer {
-    color: $primary-color-white;
-  }
-
-  .header-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .artists {
-    width: 100%;
-  }
-
-  .artist-description {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .section--footer h1 {
-    padding: 16px 0 16px 0;
-  }
-
-  .icons {
-    display: flex;
-    justify-content: space-evenly;
-    width: 40%;
-  }
-
-  .contact {
-    padding: 16px 0 0 0;
-  }
-
-  .artist-info {
-    font-weight: bold;
-  }
-
-  .logo-footer {
-    padding: 64px 0 0 0;
-  }
-
-  .copyright p {
-    font-size: 12px;
-    line-height: 18px;
-    font-weight: 400;
   }
 }
 
-/* For Desktop */
-@media screen and (min-width: 1279px) {
-  .view {
-    width: 1280px;
+.section-header__padding {
+  padding: 1rem 0 0 0;
+  @include tablet {
+    padding: 1rem 0 2.25rem 0;
   }
+}
 
-  .section--navigation {
-    background-color: $primary-color-black;
+.section-header--black {
+  color: $primary-color-black;
+}
+
+.section {
+  background-color: $primary-color-black;
+}
+
+.section__navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary-color-black;
+  list-style-type: none;
+  color: $primary-color-white;
+  padding: 1rem 0 1rem 0;
+  @include tablet {
+    flex-direction: row;
+    padding: 2.25rem 0 2.25rem 2.25rem;
   }
-
-  .section--hero {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 1.5rem;
-    margin: 0;
-    padding: 0;
-    align-items: center;
-    justify-content: flex-start;
-    background-size: cover;
-    background-position: center;
-    background-color: $primary-color-black;
-  }
-
-  .section--hero h1 {
-    color: $primary-color-white;
-    text-decoration: none;
-    opacity: 1;
-    position: absolute;
-    z-index: 100;
-    margin-left: 80px;
-  }
-
-  .hero-flex img {
-    width: 100%;
-    opacity: 0.5;
-  }
-
-  .main-section {
-    padding: 48px 80px 36px 80px;
-  }
-
-  .description-flex {
-    padding: 0 120px 0 120px;
-  }
-
-  .body-copy {
-    display: flex;
-  }
-
-  img {
-    width: 100%;
-  }
-
-  .section--gallery {
-    // display: flex;
-    // flex-direction: column;
-    // flex-wrap: wrap;
-    width: 100%;
-    height: 100%;
-    background-color: $secondary-color-alabaster;
-  }
-
-  .gallery-container {
-    display: grid;
-    gap: 1px;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .section--gallery h1 {
-    color: $primary-color-black;
-    padding: 36px 0 0 0;
-  }
-
-  .section--gallery img {
-    padding: 10px;
-  }
-
-  .subheader-description p {
-    padding: 36px 0 8px 0;
-    color: $primary-color-black;
-  }
-
-  .subheader p {
-    color: $primary-color-black;
-  }
-
-  .subheader-heading {
-    padding: 48px 0 32px 0;
-  }
-
-  .body-copy p {
-    padding: 0 32px 0 0;
-  }
-
-  .section--footer {
-    color: $primary-color-white;
-  }
-
-  .header-container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-
-  .artists {
-    width: 100%;
-  }
-
-  .artist-description {
-    display: flex;
-    justify-content: space-between;
+  @include desktop {
+    padding: 2.25rem 0 2.25rem 5rem;
     width: 66%;
   }
+}
 
-  .section--footer h1 {
-    padding: 16px 0 16px 0;
-  }
-
-  .icons {
-    display: flex;
-    justify-content: space-evenly;
-    width: 40%;
-  }
-
-  .contact {
-    padding: 16px 0 0 0;
-  }
-
-  .artist-info {
-    font-weight: bold;
-  }
-
-  .logo-footer {
-    padding: 64px 0 0 0;
-  }
-
-  .copyright p {
-    font-size: 12px;
-    line-height: 18px;
-    font-weight: 400;
+.section__list {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0.5rem 0 0 0;
+  @include tablet {
+    width: 50%;
+    padding: 0;
   }
 }
+
+.section__hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  grid-gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
+}
+
+.section__hero h1 {
+  @include tablet {
+    color: $primary-color-white;
+    text-decoration: none;
+    opacity: 1;
+    z-index: 100;
+    margin-left: 1rem;
+  }
+  @include desktop {
+    margin-left: 4.5rem;
+  }
+}
+
+.section__hero img {
+  width: 100%;
+  opacity: 0.5;
+}
+
+.main-section {
+  padding: 0 1rem 1rem 1rem;
+  @include tablet {
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+  }
+  @include desktop {
+    padding: 3rem 5rem 2.25rem 5rem;
+  }
+}
+
+.description-flex {
+  @include tablet {
+    padding: 0 4rem 0 4rem;
+  }
+  @include desktop {
+    padding: 0 7.5rem 0 7.5rem;
+  }
+}
+
+.body-copy {
+  @include tablet {
+    display: flex;
+  }
+}
+
+.main-section__gallery {
+  background-color: $secondary-color-alabaster;
+  @include tablet {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.main-section__gallery-container {
+  @include tablet {
+    display: grid;
+    gap: 0.063rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.main-section__gallery img {
+  padding: 0.75rem 0 0.125rem 0;
+  @include tablet {
+    padding: 0.625rem;
+  }
+}
+
+.subheader__description p {
+  padding: 1rem 0 0 0;
+  color: $primary-color-black;
+  @include tablet {
+    padding: 2.25rem 0 0.5rem 0;
+  }
+}
+
+.subheader__heading {
+  padding: 1.5rem 0 1rem 0;
+  @include tablet {
+    padding: 3rem 0 2rem 0;
+  }
+}
+
+.subheader p {
+  color: $primary-color-black;
+}
+
+.body-copy p {
+  @include tablet {
+    padding: 0 2rem 0 0;
+    @include desktop {
+      padding: 0 1.5rem 0 0;
+    }
+  }
+}
+
+// Comment Section
+
+.main-section__comments {
+  display: flex;
+  flex-direction: column;
+  // flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+
+.main-section__comments-container {
+  @include tablet {
+    padding: 0 4rem 0 4rem;
+  }
+  @include desktop {
+    padding: 0 15rem 0 15rem;
+  }
+}
+
+.main-section__commentbox-container {
+  display: flex;
+  // flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+
+.main-section__top-panel {
+  display: flex;
+  padding: 1rem 0 1rem 0;
+}
+.main-section__bottom-panel {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 3.1rem;
+  width: 100%;
+  padding-bottom: 2.5rem;
+  @include tablet {
+    margin-left: 6rem;
+  }
+  @include desktop {
+    margin-left: 6.75rem;
+  }
+}
+
+.comment-box {
+  // .comment {
+  display: flex;
+  justify-content: flex-start;
+  background-color: $secondary-color-alabaster;
+  border-color: $secondary-color-mercury;
+  border-radius: 0.25rem;
+  border-width: 0.063rem;
+  padding: 0.75rem;
+  width: 100%;
+  @include tablet {
+    height: 3rem;
+    padding: 1rem;
+  }
+}
+
+.comment-box__comment {
+  height: 7.5rem;
+}
+
+.comment-box:active {
+  border-color: $primary-color-black;
+}
+
+.comment-box:invalid {
+  border-color: $tertiary-color-red;
+}
+
+.comment {
+  background-color: $primary-color-black;
+  color: $primary-color-white;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 100%;
+}
+
+.comment-button {
+  padding-top: 1rem;
+  width: 100%;
+  height: 40%;
+}
+
+.comment:hover {
+  background-color: $primary-color-silver;
+}
+
+input::placeholder {
+  position: absolute;
+}
+
+.description-comment {
+  height: 100px;
+  width: 100px;
+}
+.existing-comments {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.existing-description {
+  word-wrap: break-word;
+}
+
+.comment-container {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 0 2rem 0;
+}
+
+.left-panel {
+  display: flex;
+  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+  width: 20%;
+  height: 100%;
+  & img {
+    border-radius: 50%;
+  }
+}
+
+.left-panel__existing {
+  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+  width: 20%;
+  min-width: 3.125rem;
+  & img {
+    border-radius: 100%;
+  }
+  @include tablet {
+    min-width: 6rem;
+  }
+  @include desktop {
+    min-width: 7.5rem;
+  }
+}
+
+.right-panel {
+  background-color: $secondary-color-alabaster;
+  border-color: $secondary-color-mercury;
+  border-radius: 0.25rem;
+  border-width: 0.063rem;
+  // padding: 0.75rem;
+  // height: 2.25rem;
+  // width: 100%;
+  @include tablet {
+    height: 3rem;
+    padding: 1rem;
+  }
+  padding-left: 0.2rem;
+  width: 100%;
+  height: 100%;
+}
+
+.right-panel__existing {
+  padding-left: 0.5rem;
+  width: 100%;
+  word-break: break-word;
+}
+
+.user-container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.75rem;
+}
+
+.main-section__footer {
+  background-color: $primary-color-black;
+  color: $primary-color-white;
+  width: 100%;
+}
+
+.main-section__footer h2 {
+  padding: 1rem 0 1rem 0;
+}
+
+.main-section__footer-container {
+  @include tablet {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.main-section__artists {
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.main-section__artist-description {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+  @include desktop {
+    width: 66%;
+  }
+}
+
+.main-section__artist-info {
+  font-weight: bold;
+}
+
+.main-section__copyright p {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+.main-section--padding {
+  padding: 1rem 0 0 0;
+}
+
+.logo__footer {
+  padding: 4rem 0 0 0;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  @include tablet {
+    justify-content: space-evenly;
+  }
+}
+
+hr {
+  border: 0;
+  border-top: 2px solid $secondary-color-mercury;
+}
+// .logo-footer img {
+//   display: none;
+// }
+// to place logo in top-right section
