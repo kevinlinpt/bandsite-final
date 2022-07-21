@@ -1,0 +1,313 @@
+@use "./partials/media-query" as *;
+
+$primary-color-black: #323232 !default;
+$primary-color-silver: #afafaf !default;
+$primary-color-white: #ffffff !default;
+$secondary-color-black: #000000 !default;
+$secondary-color-mercury: #e1e1e1 !default;
+$secondary-color-alabaster: #fafafa !default;
+$tertiary-color-red: #d22d2d !default;
+
+.page-header__style {
+  color: $primary-color-white;
+  text-decoration: none;
+  opacity: 1;
+  position: absolute;
+  z-index: 100;
+  margin-left: 1rem;
+  @include tablet {
+    color: $primary-color-white;
+    text-decoration: none;
+    opacity: 1;
+    position: absolute;
+    width: 100%;
+    z-index: 100;
+    margin-left: 2.25rem;
+    @include desktop {
+      margin-left: 5rem;
+    }
+  }
+}
+
+.section-header__padding {
+  padding: 1rem 0 0 0;
+  @include tablet {
+    padding: 1rem 0 2.25rem 0;
+  }
+}
+
+.section-header--black {
+  color: $primary-color-black;
+}
+
+.section {
+  background-color: $primary-color-black;
+}
+
+.section__navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary-color-black;
+  list-style-type: none;
+  color: $primary-color-white;
+  padding: 1rem 0 1rem 0;
+  @include tablet {
+    flex-direction: row;
+    padding: 2.25rem 0 2.25rem 2.25rem;
+  }
+  @include desktop {
+    padding: 2.25rem 0 2.25rem 5rem;
+    width: 66%;
+  }
+}
+
+.section__list {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  padding: 0.5rem 0 0 0;
+  @include tablet {
+    width: 50%;
+    padding: 0;
+  }
+}
+
+.section__hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+  grid-gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
+}
+
+.section__hero h1 {
+  @include tablet {
+    color: $primary-color-white;
+    text-decoration: none;
+    opacity: 1;
+    z-index: 100;
+    //   margin-left: 1rem;
+    // }
+    // @include desktop {
+    //   margin-left: 4.5rem;
+  }
+}
+
+.section__hero img {
+  width: 100%;
+  opacity: 0.5;
+}
+
+.hero-album {
+  padding-top: 1rem;
+}
+
+.hero-heading {
+  padding: 1rem 5rem 1rem 0;
+  @include tablet {
+    padding: 1rem 3rem 3rem 0;
+  }
+  @include desktop {
+    width: 50%;
+  }
+}
+
+.heading-container {
+  @include desktop {
+    display: flex;
+  }
+}
+.soundcloud-container {
+  width: 92%;
+  @include tablet {
+    width: 60%;
+  }
+  @include desktop {
+    width: 30%;
+  }
+}
+
+.main-section {
+  padding: 0 1rem 1rem 1rem;
+  @include tablet {
+    padding: 3rem 2.25rem 2.25rem 2.25rem;
+  }
+  @include desktop {
+    padding: 3rem 5rem 2.25rem 5rem;
+  }
+}
+
+// Shows
+
+.tbl-container {
+  padding: 1rem 0 1rem 0;
+  width: 100%;
+
+  @include tablet {
+    padding: 1rem 0 1rem 0;
+  }
+  @include desktop {
+    padding: 1rem 0 1rem 15rem;
+  }
+}
+// .shows td {
+//   float: left;
+//   display: inline-block;
+//   border-bottom: 1px solid $primary-color-silver;
+//   padding: 0.25rem 0.5rem 0.25rem 0;
+//   @include tablet {
+//     padding: 1rem 0 1rem 0;
+//     float: unset;
+//     display: unset;
+//   }
+// }
+
+// .shows td:nth-child(2),
+// :nth-child(3),
+// :nth-child(4) {
+//   clear: both;
+//   @include tablet {
+//     clear: unset;
+//   }
+// }
+
+// .shows td:nth-child(4) {
+//   // width: 100%;
+// }
+
+// .shows td:last-child {
+//   padding: 0.25rem 0 0.25rem 0;
+//   @include tablet {
+//     padding: 1rem 0 1rem 0;
+//   }
+// }
+.shows {
+  width: 100%;
+  word-wrap: break-word;
+  @include tablet {
+    border-collapse: collapse;
+  }
+}
+
+.shows td {
+  float: left;
+  // display: inline-block;
+
+  padding: 0.25rem 0.5rem 0.25rem 0;
+  @include tablet {
+    border-bottom: 1px solid $primary-color-silver;
+    padding: 1rem 0 1rem 0;
+    float: none;
+  }
+}
+
+.shows td:nth-child(2),
+:nth-child(3),
+:nth-child(4) {
+  clear: both;
+  @include tablet {
+    clear: unset;
+  }
+}
+
+.shows td:last-child {
+  padding: 0.25rem 0 0.25rem 0;
+  border-bottom: 1px solid $primary-color-silver;
+  @include tablet {
+    padding: 1rem 0 1rem 0;
+  }
+}
+
+.shows td:nth-child(4) {
+  width: 100%;
+  @include tablet {
+    width: unset;
+  }
+}
+
+.line {
+  display: none;
+}
+
+.btn {
+  background-color: $primary-color-black;
+  color: $primary-color-white;
+  border-radius: 0.25rem;
+  width: 100%;
+  height: 100%;
+  min-height: 2.5rem;
+}
+@include desktop {
+  min-height: 3.125rem;
+}
+
+.body-copy:first-child {
+  font-weight: bold;
+}
+
+//footer
+.main-section__footer {
+  background-color: $primary-color-black;
+  color: $primary-color-white;
+  width: 100%;
+}
+
+.main-section__footer h2 {
+  padding: 1rem 0 1rem 0;
+}
+
+.main-section__footer-container {
+  @include tablet {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
+
+.main-section__artists {
+  @include tablet {
+    width: 100%;
+  }
+}
+
+.main-section__artist-description {
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
+  @include desktop {
+    width: 66%;
+  }
+}
+
+.main-section__artist-info {
+  font-weight: bold;
+}
+
+.main-section__copyright p {
+  font-size: 0.75rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+
+.main-section--padding {
+  padding: 1rem 0 0 0;
+}
+
+.logo__footer {
+  padding: 4rem 0 0 0;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  @include tablet {
+    justify-content: space-evenly;
+  }
+}
