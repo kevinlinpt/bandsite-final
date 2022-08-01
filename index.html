@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./styles/bio.css" />
     
     <!-- <title>BANDSITE</title> -->
+    <title>Bandsite Biography Page</title>
   </head>
   <body>
     <!-- header section starts -->
@@ -25,13 +26,13 @@
             /></a>
           </div>
           <div class="section__list">
-            <div class="section__header">
+            <div class="section__states section__header">
               <a href="./index.html">Biography</a>
             </div>
-            <div class="section__header">
-              <a href="./index.html">Shows</a>
+            <div class="section__states section__header">
+              <a href="./pages/shows.html">Shows</a>
             </div>
-          </div> v
+          </div> 
         </nav>
       </section>
     </header>
@@ -159,8 +160,7 @@
           <div class= "main-section__commentbox-container">
             <div class= "main-section__bottom-panel">
               <input type="text" class="comment-box comment-box__comment" placeholder="Add a new comment" />
-              <div class= "comment-button"><button class="comment">COMMENT</button></div>
-              <p class="description-comment"></p>
+              <div class= "comment-button"><button value="clear" class="comment">COMMENT</button></div>
             </div>
           </div>
           <hr/>
@@ -169,8 +169,9 @@
         </div>
       </section>
   </body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="./scripts/index-page.js"></script>
-  <footer class="main-section main-section__footer">
+    <footer class="main-section main-section__footer">
     <div class="main-section__footer-container">
       <div class="section-header section-header__padding">
         <h2>Get in Touch</h2>

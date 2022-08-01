@@ -24,11 +24,11 @@
 }
 
 .section-header__padding {
-  padding: 1rem 0 0 0;
+  padding: 2rem 0 0.75rem 0;
 }
 @media screen and (min-width: 768px) {
   .section-header__padding {
-    padding: 1rem 0 2.25rem 0;
+    padding: 1rem 0 1rem 0;
   }
 }
 
@@ -52,20 +52,23 @@
 @media screen and (min-width: 768px) {
   .section__navbar {
     flex-direction: row;
-    padding: 2.25rem 0 2.25rem 2.25rem;
+    height: 5rem;
+    padding-left: 2.25rem;
   }
 }
 @media screen and (min-width: 1280px) {
   .section__navbar {
-    padding: 2.25rem 0 2.25rem 5rem;
+    padding-left: 5rem;
     width: 66%;
   }
 }
 
 .section__list {
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
   width: 100%;
+  height: 100%;
   padding: 0.5rem 0 0 0;
 }
 @media screen and (min-width: 768px) {
@@ -73,6 +76,23 @@
     width: 50%;
     padding: 0;
   }
+}
+
+.section__states {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: #e1e1e1;
+}
+
+.section__states:active {
+  color: #ffffff;
+  font-weight: bold;
+  border-bottom: 0.313rem solid white;
+}
+
+.section__states:hover {
+  border-bottom: 0.313rem solid white;
 }
 
 .section__hero {
@@ -85,6 +105,7 @@
   justify-content: flex-start;
   background-size: cover;
   background-position: center;
+  padding: 0 0.5rem 0 0.5rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -140,7 +161,7 @@
 }
 
 .main-section {
-  padding: 0 1rem 1rem 1rem;
+  padding: 0 1.5rem 1rem 1.5rem;
 }
 @media screen and (min-width: 768px) {
   .main-section {
@@ -153,18 +174,9 @@
   }
 }
 
-.tbl-container {
-  padding: 1rem 0 1rem 0;
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .tbl-container {
-    padding: 1rem 0 1rem 0;
-  }
-}
 @media screen and (min-width: 1280px) {
-  .tbl-container {
-    padding: 1rem 0 1rem 15rem;
+  .main-section__shows {
+    display: flex;
   }
 }
 
@@ -175,58 +187,86 @@
 @media screen and (min-width: 768px) {
   .shows {
     border-collapse: collapse;
-  }
-}
-
-.shows td {
-  float: left;
-  padding: 0.25rem 0.5rem 0.25rem 0;
-}
-@media screen and (min-width: 768px) {
-  .shows td {
-    border-bottom: 1px solid #afafaf;
-    padding: 1rem 0 1rem 0;
-    float: none;
-  }
-}
-
-.shows td:nth-child(2),
-:nth-child(3),
-:nth-child(4) {
-  clear: both;
-}
-@media screen and (min-width: 768px) {
-  .shows td:nth-child(2),
-:nth-child(3),
-:nth-child(4) {
-    clear: unset;
-  }
-}
-
-.shows td:last-child {
-  padding: 0.25rem 0 0.25rem 0;
-  border-bottom: 1px solid #afafaf;
-}
-@media screen and (min-width: 768px) {
-  .shows td:last-child {
     padding: 1rem 0 1rem 0;
   }
 }
-
-.shows td:nth-child(4) {
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .shows td:nth-child(4) {
-    width: unset;
+@media screen and (min-width: 1280px) {
+  .shows {
+    padding: 1rem 0 1rem 10rem;
   }
 }
 
-.line {
+@media screen and (min-width: 768px) {
+  .show-info-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1.3rem 0 1rem 0;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 1280px) {
+  .show-info-container {
+    margin: 1.3rem 0 1rem 0;
+  }
+}
+
+.show-date {
+  font-weight: bold;
+  padding-top: 1rem;
+}
+
+.header-container {
   display: none;
 }
+@media screen and (min-width: 768px) {
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    width: 68.5%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .header-container {
+    width: 66%;
+  }
+}
 
-.btn {
+.header-date,
+.header-venue,
+.header-location {
+  color: #afafaf;
+  padding-top: 1rem;
+}
+
+.show-header-date,
+.show-header-venue,
+.show-header-location {
+  color: #afafaf;
+  padding-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .show-header-date,
+.show-header-venue,
+.show-header-location {
+    display: none;
+  }
+}
+
+.show-date,
+.show-venue,
+.show-location {
+  padding-top: 0.5rem;
+}
+
+.show-location {
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .show-location {
+    padding-bottom: 0;
+  }
+}
+
+.show-button-tickets {
   background-color: #323232;
   color: #ffffff;
   border-radius: 0.25rem;
@@ -235,18 +275,19 @@
   min-height: 2.5rem;
 }
 @media screen and (min-width: 768px) {
-  .btn {
-    min-height: 2.5rem;
+  .show-button-tickets {
+    width: 20%;
   }
 }
 @media screen and (min-width: 1280px) {
-  .btn {
+  .show-button-tickets {
     min-height: 3.125rem;
   }
 }
 
-.body-copy:first-child {
-  font-weight: bold;
+.divider {
+  height: 0.063rem;
+  color: #e1e1e1;
 }
 
 .main-section__footer {
@@ -256,7 +297,7 @@
 }
 
 .main-section__footer h2 {
-  padding: 1rem 0 1rem 0;
+  padding-bottom: 0.5rem;
 }
 
 @media screen and (min-width: 768px) {

@@ -1,6 +1,6 @@
 /*# sourceMappingURL=global.css.map */
 @use "./media-query" as *;
-
+@use "./colors" as *;
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,13 +15,6 @@
   font-family: "Avenir";
   src: url("../fonts/Avenir.eot?#iefix") format("embedded-opentype");
 }
-
-$primary-color-black: #323232 !default;
-$primary-color-silver: #afafaf !default;
-$primary-color-white: #ffffff !default;
-$secondary-color-black: #000000 !default;
-$secondary-color-mercury: #e1e1e1 !default;
-$secondary-color-alabaster: #fafafa !default;
 
 /* Logos & Images */
 .logo {

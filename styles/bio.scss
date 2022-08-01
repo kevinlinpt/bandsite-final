@@ -1,12 +1,5 @@
 @use "./partials/media-query" as *;
-
-$primary-color-black: #323232 !default;
-$primary-color-silver: #afafaf !default;
-$primary-color-white: #ffffff !default;
-$secondary-color-black: #000000 !default;
-$secondary-color-mercury: #e1e1e1 !default;
-$secondary-color-alabaster: #fafafa !default;
-$tertiary-color-red: #d22d2d !default;
+@use "./partials/colors" as *;
 
 .page-header__style {
   color: $primary-color-white;
@@ -50,23 +43,43 @@ $tertiary-color-red: #d22d2d !default;
   padding: 1rem 0 1rem 0;
   @include tablet {
     flex-direction: row;
-    padding: 2.25rem 0 2.25rem 2.25rem;
+    height: 5rem;
+    padding-left: 2.25rem;
   }
   @include desktop {
-    padding: 2.25rem 0 2.25rem 5rem;
+    padding-left: 5rem;
     width: 66%;
   }
 }
 
 .section__list {
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
   width: 100%;
+  height: 100%;
   padding: 0.5rem 0 0 0;
   @include tablet {
     width: 50%;
     padding: 0;
   }
+}
+
+.section__states {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: $secondary-color-mercury;
+}
+
+.section__states:active {
+  color: $primary-color-white;
+  font-weight: bold;
+  border-bottom: 0.313rem solid white;
+}
+
+.section__states:hover {
+  border-bottom: 0.313rem solid white;
 }
 
 .section__hero {
@@ -190,7 +203,7 @@ $tertiary-color-red: #d22d2d !default;
     padding: 0 4rem 0 4rem;
   }
   @include desktop {
-    padding: 0 15rem 0 15rem;
+    padding: 0 20rem 0 20rem;
   }
 }
 
@@ -199,29 +212,33 @@ $tertiary-color-red: #d22d2d !default;
   // flex-wrap: wrap;
   height: 100%;
   width: 100%;
+  justify-content: flex-end;
 }
 
 .main-section__top-panel {
   display: flex;
   padding: 1rem 0 1rem 0;
   @include tablet {
-    min-height: 7.5rem;
+    // min-height: 7.5rem;
   }
   @include tablet {
-    min-height: 8.75rem;
+    // min-height: 8.75rem;
   }
 }
 .main-section__bottom-panel {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 3.1rem;
-  width: 100%;
+  justify-content: flex-end;
+  // margin-left: 3.1rem;
+  width: 78%;
   padding-bottom: 2.5rem;
   @include tablet {
-    margin-left: 6.5rem;
+    // margin-left: 6.5rem;
+    width: 88.5%;
   }
   @include desktop {
-    margin-left: 8rem;
+    // margin-left: 8rem;
+    width: 87.5%;
   }
 }
 
@@ -241,13 +258,14 @@ $tertiary-color-red: #d22d2d !default;
 }
 
 .comment-box__name-container {
-  padding-left: 0.05rem;
+  padding-left: 0.85rem;
   width: 100%;
+
   @include tablet {
     padding-left: 0.55rem;
   }
   @include desktop {
-    padding-left: 1.3rem;
+    padding-left: 1rem;
   }
 }
 
@@ -272,9 +290,14 @@ $tertiary-color-red: #d22d2d !default;
 }
 
 .comment-button {
+  display: flex;
+  justify-content: flex-end;
   padding-top: 1rem;
   width: 100%;
   height: 40%;
+  @include tablet {
+    width: 33%;
+  }
 }
 
 .comment:hover {
@@ -307,26 +330,35 @@ input::placeholder {
 
 .left-panel {
   display: flex;
-  padding: 0.1rem 0.4rem 0.1rem 0;
-  width: 20%;
+  // padding: 0.1rem 0.4rem 0.1rem 0;
+  width: 21%;
   height: 100%;
   & img {
     border-radius: 50%;
   }
+
+  @include tablet {
+    width: 11%;
+  }
+  @include desktop {
+    // padding: 0;
+    width: 10%;
+  }
 }
 
 .left-panel__existing {
-  padding: 0.1rem 0.5rem 0.1rem 0;
+  // padding: 0.1rem 0.5rem 0.1rem 0;
   width: 20%;
-  min-width: 3.125rem;
+  // min-width: 3.125rem;
   & img {
     border-radius: 100%;
   }
   @include tablet {
-    min-width: 6rem;
+    // min-width: 6rem;
+    width: 10%;
   }
   @include desktop {
-    min-width: 7.5rem;
+    // min-width: 7.5rem;
   }
 }
 
@@ -348,7 +380,7 @@ input::placeholder {
 }
 
 .right-panel__existing {
-  padding-left: 0.5rem;
+  padding-left: 1rem;
   width: 100%;
   word-break: break-word;
 }
@@ -357,6 +389,10 @@ input::placeholder {
   display: flex;
   justify-content: space-between;
   padding-bottom: 0.75rem;
+}
+
+.avatar {
+  background-color: $primary-color-silver;
 }
 
 //footer
